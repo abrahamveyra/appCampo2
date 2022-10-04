@@ -32,3 +32,12 @@ document.getElementById("zona").addEventListener('click', () =>{
 document.getElementById("cultivo").addEventListener('click', () =>{
     console.log(document.getElementById("cultivo").value)
 })
+
+
+document.getElementById('hablar').addEventListener("click", () => {
+    decir(document.getElementById("texto").value)
+})
+
+function decir(texto){
+    speechSynthesis.speak(new SpeechSynthesisUtterance(texto))
+}
